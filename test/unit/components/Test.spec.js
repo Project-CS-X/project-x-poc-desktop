@@ -18,19 +18,17 @@ function setup() {
 }
 
 describe('Test component', () => {
-  it('should have a header that says \'Test Component 1\'', () => {
+  it('should have a header that says \'Test Component\'', () => {
     const { header } = setup()
-    expect(header.text()).toMatch(/^Test Component 1$/)
+    expect(header.text()).toMatch(/^Test Component$/)
   })
 
-  // Snap
-  it('should match exact snapshot', () => {
-    const test = (
-        <Test />
-    )
+// Snap
+it('should match exact snapshot', () => {
+  const test = <Test />
 
-    const tree = renderer.create(test).toJSON()
+  const tree = renderer.create(test).toJSON()
 
-    expect(tree).toMatchSnapshot()
-  })
+  expect(tree).toMatchSnapshot()
+})
 })

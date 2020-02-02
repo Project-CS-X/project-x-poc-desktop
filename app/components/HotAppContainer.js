@@ -1,13 +1,14 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
-import Test from '../components/Test'
+import Test from './Test'
 
-function App(props) {
+function HotAppContainer(props) {
     return (
         <div>
+            <p>Test</p>
             <Test />
         </div>
-    )
+    )   
 }
 
-export default hot(App)
+export default hot(HotAppContainer)
